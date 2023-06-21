@@ -49,7 +49,6 @@ async function newLevel() {
     addColor(colors);
     flashColors(colors);
     level++;
-    logEverything()
     $("#level-title").text("Level : " + (parseInt(level)));
     await sleep(2000);
 }
@@ -71,9 +70,6 @@ function resetGame(){
     level = 0;
     $("#level-subtitle").text("");
 
-}
-function logEverything() {
-    console.log(index, colors, level)
 }
 
 
