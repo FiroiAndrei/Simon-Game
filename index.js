@@ -62,6 +62,7 @@ function Lose() {
     $("#level-title").text("Wrong, You lose!");
     $("#level-subtitle").text("Press A to start again.");
     game_started = false;
+    buttons_disabled = true;
 }
 
 function resetGame(){
@@ -69,7 +70,6 @@ function resetGame(){
     colors = [];
     level = 0;
     $("#level-subtitle").text("");
-
 
 }
 function logEverything() {
@@ -106,7 +106,9 @@ async function checkCorrect(color) {
             if (game_started) {
                
                 var color = buttonColors.indexOf($(this)[0].id);
-                $(this).fadeOut(200).fadeIn(200);
+                $(this).toggleClass("pressed");
+                await sleep(100);
+                $(this).toggleClass("pressed");
                 checkCorrect(color);
                 
             }
