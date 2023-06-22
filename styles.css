@@ -1,6 +1,7 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  user-select: none;
 }
 
 #level-title, #level-subtitle {
@@ -8,6 +9,10 @@ body {
   font-size: 3rem;
   margin:  5%;
   color: #FEF2BF;
+}
+
+#level-title {
+  cursor: pointer;
 }
 
 .container {
